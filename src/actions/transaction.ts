@@ -7,9 +7,10 @@ export const fakeFetch = () => {
   const span = transaction?.startChild({
     description: 'Testing',
     op: 'fake-fetch',
-    endTimestamp: timeStamp,
-    startTimestamp: timeStamp - 10,
+    startTimestamp: timeStamp,
   });
-  console.log('span', span);
-  span?.finish();
+
+  setTimeout(() => {
+    span?.finish();
+  }, 10000);
 };

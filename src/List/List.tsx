@@ -1,3 +1,4 @@
+import {withProfiler} from '@sentry/react-native';
 import React from 'react';
 import {View, Text} from 'react-native';
 
@@ -9,4 +10,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default withProfiler(List);
